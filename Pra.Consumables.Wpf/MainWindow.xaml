@@ -1,0 +1,40 @@
+﻿<Window x:Class="Pra.Consumables.Wpf.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Pra.Consumables.Wpf"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" Loaded="Window_Loaded">
+    <Grid>
+        <GroupBox x:Name="grpMain" Header="Consumables" Margin="14,13,437,56">
+            <Grid>
+                <Button x:Name="btnNewFood" Content="+ Food" HorizontalAlignment="Left" Height="31" Margin="10,10,0,0" VerticalAlignment="Top" Width="65" Click="BtnNewFood_Click"/>
+                <Button x:Name="btnNewBeverage" Content="+ Beverage" HorizontalAlignment="Left" Height="31" Margin="90,10,0,0" VerticalAlignment="Top" Width="65" Click="BtnNewBeverage_Click"/>
+                <Button x:Name="btnEdit" Content="Wijzig" HorizontalAlignment="Left" Height="31" Margin="170,10,0,0" VerticalAlignment="Top" Width="65" Click="BtnEdit_Click"/>
+                <Button x:Name="btnDelete" Content="Verwijder" HorizontalAlignment="Left" Height="31" Margin="246,10,0,0" VerticalAlignment="Top" Width="65" Click="BtnDelete_Click"/>
+                <ListBox x:Name="lstConsumables" HorizontalAlignment="Left" Height="271" Margin="13,49,0,0" VerticalAlignment="Top" Width="297" SelectionChanged="LstConsumables_SelectionChanged"/>
+
+            </Grid>
+        </GroupBox>
+        <GroupBox x:Name="grpDetails" Header="Details" Margin="375,15,76,54">
+            <Grid>
+                <Button x:Name="btnSave" Content="Bewaren" HorizontalAlignment="Left" Height="35" Margin="10,10,0,0" VerticalAlignment="Top" Width="124" Click="BtnSave_Click"/>
+                <Button x:Name="btnCancel" Content="Annuleren" HorizontalAlignment="Left" Height="35" Margin="140,10,0,0" VerticalAlignment="Top" Width="124" Click="BtnCancel_Click"/>
+                <Label Content="Omschrijving" HorizontalAlignment="Left" VerticalAlignment="Top" Width="106" Margin="10,60,0,0"/>
+                <TextBox x:Name="txtDescription" HorizontalAlignment="Left" Margin="110,65,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                <Label Content="Eenheid" HorizontalAlignment="Left" VerticalAlignment="Top" Width="106" Margin="10,90,0,0"/>
+                <TextBox x:Name="txtUnit" HorizontalAlignment="Left" Margin="110,95,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                <Label Content="Prijs/eenheid" HorizontalAlignment="Left" VerticalAlignment="Top" Width="106" Margin="10,120,0,0"/>
+                <TextBox x:Name="txtPricePerUnit" HorizontalAlignment="Left" Margin="110,125,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                <Grid x:Name="grdBeverage" HorizontalAlignment="Left" Height="15" VerticalAlignment="Top" Margin="110,150,0,0">
+                    <CheckBox x:Name="chkAlcohol" Content="Alcoholisch" HorizontalAlignment="Left" VerticalAlignment="Center" Width="120"/>
+                </Grid>
+                <Grid x:Name="grdFood" HorizontalAlignment="Left" Height="117" VerticalAlignment="Top" Width="161" Margin="10,180,0,0" >
+                    <Label Content="Gezondheidslabel" HorizontalAlignment="Left" VerticalAlignment="Top" Width="106" Height="15" Padding="0"/>
+                    <ListBox x:Name="lstHealthLabel" HorizontalAlignment="Left" Height="108" Margin="106,0,0,0" VerticalAlignment="Top" Width="55"/>
+                </Grid>
+            </Grid>
+        </GroupBox>
+    </Grid>
+</Window>
